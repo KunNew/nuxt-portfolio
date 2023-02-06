@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Jost:wght@100;400;800&family=Lora:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-navbar{
+  @apply fixed w-full z-10 top-0 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 backdrop-brightness-100 firefox:bg-white  firefox:bg-opacity-30 border-b border-b-gray-100 dark:border-b-gray-800 bg-white/[.25] dark:bg-black/[.1];
+}
+.skill-items li{
+  @apply border border-gray-700 dark:border-gray-100 rounded-md px-3 py-2 uppercase text-xs;
+  
+}
+/* 
+html.dark 
+.markdown p,
+.markdown div,
+.markdown article,
+.markdown span, 
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6,
+.markdown ul
+{
+  color: #fff !important;
+}
+
+html.light .markdown > p,
+.markdown div,
+.markdown article,
+.markdown span, 
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6,
+.markdown ul
+{
+  color: #111 !important;
+} */
+
+#nprogress .bar {
+  background: #29d !important;
+}
+
+.custom-height{
+  min-height: calc(100vh - 96px - 56px);
+}
+
+.custom-section-height{
+  min-height: calc(100vh - 96px);
+}
+
+:root {
+  /* Your default theme */
+  --background: white;
+  --foreground: black;
+}
+
+[data-theme='dark'] {
+  --background: black;
+  --foreground: white;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:  'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
