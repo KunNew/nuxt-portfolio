@@ -4,7 +4,8 @@ useHead({
   meta: [{ name: "description", content: "My amazing portfolio with nuxt." }],
 });
 
-const { data } = await useFetch("/api/use");
+const { data: uses } = await useFetch("/api/uses");
+
 
 
 </script>
@@ -14,7 +15,7 @@ const { data } = await useFetch("/api/use");
     <h1 class="text-4xl font-bold m-6 text-center">Uses</h1>
     <div class="lg:mb-48 mb-24">
       <div
-        class="mx-auto space-y-2 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-1" v-for="(it,index) in  data.uses" :key="index"
+        class="mx-auto space-y-2 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-1" v-for="(it,index) in  uses" :key="index"
       >
         <div class="mb-4">
           <h3 class="mb-4 font-bold text-2xl">{{ it.name }}</h3>
