@@ -2,7 +2,7 @@
 
 export default defineNuxtConfig({
     css: ['~/assets/css/tailwind.css'],
-    modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode","@nuxt/image-edge","@nuxt/content"],
+    modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode","@nuxt/image-edge"],
     postcss: {
         plugins: {
           tailwindcss: {},
