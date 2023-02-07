@@ -1,5 +1,7 @@
 const plugin = require('tailwindcss/plugin');
 
+const colors = require("tailwindcss/colors");
+
 module.exports = {
     content: [
         "./components/**/*.{js,vue,ts}",
@@ -26,6 +28,7 @@ module.exports = {
   },
   theme: {
     
+    
     fontFamily: {
       'sans' : ['Inter','sans-serif'],
       'serif' : ['Lora','serif'],
@@ -41,6 +44,12 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+				primary: {
+					DEFAULT: colors.violet[700],
+					...colors.violet,
+				},
+			},
       animation: {
         wiggle: 'wiggle 3s ease-in-out infinite',
         bounce: 'bounce 2s ease-in-out infinite',

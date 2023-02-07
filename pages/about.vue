@@ -13,11 +13,12 @@ const { data: about } = await useFetch("/api/about");
     <h1 class="text-4xl font-bold m-6 text-center">{{ about.title }}</h1>
 
     <div class="text-center mb-4">
-      <img
-        src="~/assets/bigheadkarngyan.png"
+      <nuxt-img
+        src="bigheadkarngyan.png"
         width="240"
         height="240"
         class="rounded-full overflow-hidden mx-auto"
+        loading="lazy"
       />
     </div>
 

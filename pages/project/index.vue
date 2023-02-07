@@ -4,7 +4,7 @@ useHead({
   meta: [{ name: "description", content: "My amazing portfolio with nuxt." }],
 });
 
-const {data: projects  } = useFetch(`/api/project`)
+const { data: projects } = useFetch(`/api/project`);
 </script>
 
 <template>
@@ -13,9 +13,9 @@ const {data: projects  } = useFetch(`/api/project`)
       <h1 class="text-4xl font-bold m-6 text-center">Projects</h1>
       <div class="mb-4 custom-height">
         <div
-          class="mx-auto space-y-2 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2" 
+          class="mx-auto space-y-2 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2"
         >
-          <div v-for="(project,index) in projects" :key="index"> 
+          <div v-for="(project, index) in projects" :key="index">
             <div
               class="rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform bg-white max-w-md overflow-hidden"
             >
@@ -26,35 +26,38 @@ const {data: projects  } = useFetch(`/api/project`)
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
               >
-                <img :src="project.thumbnail" alt="" class='h-60 w-full object-cover object-left-top' />
+              
+                <nuxt-img
+                  :src="project.thumbnail"
+                  loading="lazy"
+                  class="h-60 w-full object-cover object-left-top"
+                  :alt="project.title"
+                />
               </a>
               <div class="p-3">
                 <h5 class="text-gray-900 text-2xl font-bold mb-2">
-             {{ project.title }}
+                  {{ project.title }}
                 </h5>
                 <p class="text-gray-700 text-sm mb-4">
-                    {{ project.description }}
+                  {{ project.description }}
                 </p>
                 <div class="flex justify-between">
-                  <p class="flex space-x-1" >
-              
+                  <p class="flex space-x-1">
                     <span
-                      class="px-3 py-1 border rounded-md text-slate-500 capitalize text-xs" v-for="(it,idx) in project.tech" :key="idx"
-                   
-                   
+                      class="px-3 py-1 border rounded-md text-slate-500 capitalize text-xs"
+                      v-for="(it, idx) in project.tech"
+                      :key="idx"
                     >
-                {{ it }}
-                </span>
-                 
+                      {{ it }}
+                    </span>
                   </p>
                   <div class="flex">
-                  
                     <a
                       target="_blank"
                       :href="project.github"
                       rel="noreferrer "
                       class="inline-flex mr-2"
-                      title="Github" 
+                      title="Github"
                       v-if="project.github"
                     >
                       <svg
@@ -72,7 +75,13 @@ const {data: projects  } = useFetch(`/api/project`)
                         ></path>
                       </svg>
                     </a>
-                    <a target="_blank" :href="project.live" rel="noreferrer " title="Link" v-else>
+                    <a
+                      target="_blank"
+                      :href="project.live"
+                      rel="noreferrer "
+                      title="Link"
+                      v-else
+                    >
                       <svg
                         class="w-6 h-6 stroke-black"
                         fill="none"

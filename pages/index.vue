@@ -11,7 +11,8 @@ useHead({
    <main class='mb-auto'>
         <div class='mb-6 custom-section-height flex flex-col justify-center items-center -mt-6 text-center'>
           <div class='mb-4'>
-            <img src="~/assets/bigheadkarngyan.png" width="240" height="240" class='rounded-full overflow-hidden' />
+           
+            <nuxt-img src="bigheadkarngyan.png" width="240" height="240" class='rounded-full overflow-hidden' loading="lazy" alt="pheak"/>
           </div>
           <h1 class="lg:text-5xl text-3xl font-bold mb-4">I am Pheak Minute <span class="animate-wiggle inline-flex origin-bottom">👋</span></h1>
           <p class='mb-4'>A Passionate Web Developer & Battambang</p>

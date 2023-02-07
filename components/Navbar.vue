@@ -25,6 +25,11 @@ const handleClick = () => {
         <div
           class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto gap-4 font-semibold"
         >
+        <NuxtLink to="/blog"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center text-black justify-center hover:bg-gray-100 dark:hover:text-black"
+          >
+            Blog
+          </NuxtLink>
         <NuxtLink to="/project"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center text-black justify-center hover:bg-gray-100 dark:hover:text-black"
           >
