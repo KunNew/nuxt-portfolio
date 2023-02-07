@@ -40,6 +40,11 @@ const handleClick = () => {
           >
             About
           </NuxtLink>
+          <NuxtLink to="/use"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center text-black justify-center hover:bg-gray-100 dark:hover:text-black"
+          >
+            Uses
+          </NuxtLink>
         </div>
       </div>
 

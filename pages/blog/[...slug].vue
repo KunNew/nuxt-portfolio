@@ -1,8 +1,9 @@
 <template>
 	<div>
+
 		<main>
 			<article
-				class="lg:pt-20 pt-10 relative"
+				class="lg:pt-20 pt-10 relative flex items-start lg:space-x-10 px-[5%] lg:px-[10%]"
 			>
 				<div
 					v-if="blog.excerpt"
@@ -45,8 +46,6 @@
 	const { data: blog } = await useAsyncData(slug, () => {
 		return queryContent(slug).findOne();
 	});
-
-
 
 	const toc = computed(() => {
 		if (!blog.value) return [];
